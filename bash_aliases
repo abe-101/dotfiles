@@ -66,3 +66,7 @@ neofetch
 alias win11='cd /mnt/data/qemu/quickemu; ./quickemu --vm windows-11.conf --display spice'
 alias macos='cd /mnt/data/qemu/quickemu; ./quickemu --vm macos-catalina.conf'
 alias fedora='cd /mnt/data/qemu/quickemu; ./quickemu --vm fedora-35_beta.conf --display spice'
+
+# quicly rotate screen
+alias screenInverted='xrandr --output eDP1 --rotate inverted'
+alias screenNormal='xrandr --output eDP1 --rotate normal'
