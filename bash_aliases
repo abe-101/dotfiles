@@ -1,8 +1,9 @@
 # This is an extension of .bashrc
 # it's intention is to separate from the default .bashrc
-# here we can add our custom aliass and shell functions
+# allowing the debian maitainers to make changes to .bashrc
+# without overiding individuals files.
 
-# c will perfome like clear
+# Clear terminal with c
 alias c=clear
 
 # Mount using veracrypt software with shortcut veram
@@ -11,7 +12,7 @@ alias veraper='sudo veracrypt --mount /home/$USER/Documents/personal /media/vera
 # Dismount with shortcut vared
 alias verad='veracrypt -d'
 
-# Quickly connect to ProtonVPN with secure core
+# Quickly connect to ProtonVPN
 alias ny11='protonvpn-cli c US-NY#11 -p tcp'
 alias ny48='protonvpn-cli c US-NY#48 -p tcp'
 
@@ -26,17 +27,10 @@ export VISUAL=vim
 CDPATH=.:/usr/share/doc:~:~/Desktop:~
 export CDPATH
 
+source ~/.local/bin/ssh_shortcut
+
 # runs the bash script in current env not as a child process
 alias cbook='. cbook'
-
-# ssh into pi_server initramfs to dycrypt
-alias cryptroot='ssh -o UserKnownHostsFile=~/.ssh/known_host.initramfs root@192.168.12.115'
-
-# ssh into pi_server
-alias pi='ssh mipi@192.168.12.115'
-
-# ssh into router
-alias router='ssh root@192.168.12.1'
 
 # arch wiki page within term
 wiki() {
