@@ -31,6 +31,7 @@ source ~/.local/bin/ssh_shortcut
 
 # runs the bash script in current env not as a child process
 alias cbook='. cbook'
+alias pybook='. pybook'
 
 # arch wiki page within term
 wiki() {
