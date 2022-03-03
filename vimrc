@@ -75,4 +75,4 @@ set nohlsearch            " Don't continue to highlight searched phrases.
 set incsearch             " But do highlight as you type your search.
 
 " Turn on spell check
-set spell spelllang=en_us
+"set spell spelllang=en_us
