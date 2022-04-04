@@ -7,7 +7,7 @@
 alias c=clear
 
 # Mount using veracrypt software with shortcut veram
-alias veraper='sudo veracrypt --mount /home/$USER/personal /media/veracrypt1'
+alias veraper='sudo veracrypt --mount-options=timestamp --mount /home/$USER/Documents/personal /media/veracrypt1'
 
 # Dismount with shortcut vared
 alias verad='veracrypt -d'
@@ -44,7 +44,11 @@ wtfis() {
 }
 
 # Refresh .bash_aliases
-alias bashrc="vim ~/.bash_aliases && source ~/.bash_aliases"
+if cat /etc/*release | grep ^NAME | grep Fedora; then
+     alias bashrc="vim ~/.bashrc.d/bash_aliases && source ~/.bashrc.d/bash_aliases"
+elif cat /etc/*release | grep ^NAME | grep Debian ; then
+    -alias bashrc="vim ~/.bash_aliases && source ~/.bash_aliases"
+fi
 
 # if user is not root, pass all commands via sudo #
 if [ $UID -ne 0 ]; then
