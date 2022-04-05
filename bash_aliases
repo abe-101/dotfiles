@@ -49,7 +49,7 @@ wtfis() {
 if cat /etc/*release | grep ^NAME | grep Fedora; then
      alias bashrc="vim ~/.bashrc.d/bash_aliases && source ~/.bashrc.d/bash_aliases"
 elif cat /etc/*release | grep ^NAME | grep Debian ; then
-    -alias bashrc="vim ~/.bash_aliases && source ~/.bash_aliases"
+     alias bashrc="vim ~/.bash_aliases && source ~/.bash_aliases"
 fi
 
 # if user is not root, pass all commands via sudo #
