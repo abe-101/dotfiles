@@ -9,6 +9,8 @@ alias c=clear
 # Mount using veracrypt software with shortcut veram
 alias veraper='sudo veracrypt --mount-options=timestamp --mount /home/$USER/Documents/personal /media/veracrypt1'
 
+alias veragelt='sudo veracrypt --mount-options=timestamp --mount /home/$USER/Documents/gelt /media/veracrypt2'
+
 # Dismount with shortcut vared
 alias verad='veracrypt -d'
 
