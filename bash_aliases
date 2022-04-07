@@ -12,7 +12,7 @@ alias veraper='sudo veracrypt --mount-options=timestamp --mount /home/$USER/Docu
 alias veragelt='sudo veracrypt --mount-options=timestamp --mount /home/$USER/Documents/gelt /media/veracrypt2'
 
 # Dismount with shortcut vared
-alias verad='veracrypt -d'
+alias verad='sudo veracrypt -d'
 
 # Quickly connect to ProtonVPN
 alias ny11='protonvpn-cli c US-NY#11 -p tcp'
@@ -47,21 +47,39 @@ wtfis() {
 
 # Refresh .bash_aliases
 if cat /etc/*release | grep ^NAME | grep Fedora; then
-     alias bashrc="vim ~/.bashrc.d/bash_aliases && source ~/.bashrc.d/bash_aliases"
+    alias bashrc="vim ~/.bashrc.d/bash_aliases && source ~/.bashrc.d/bash_aliases"
+    # if user is not root, pass all commands via sudo #
+    if [ $UID -ne 0 ]; then
+    	alias update='sudo dnf update'
+    	alias upgrade='sudo dnf upgrade'
+    	alias ainstall='sudo dnf install'
+    	alias shutdown='sudo shutdown now'
+    	alias reboot='sudo reboot'
+    	alias liup='dnf list --upgradable'
+    fi
 elif cat /etc/*release | grep ^NAME | grep Debian ; then
-     alias bashrc="vim ~/.bash_aliases && source ~/.bash_aliases"
+    alias bashrc="vim ~/.bash_aliases && source ~/.bash_aliases"
+    # if user is not root, pass all commands via sudo #
+    if [ $UID -ne 0 ]; then
+    	alias update='sudo apt update'
+    	alias upgrade='sudo apt upgrade'
+    	alias ainstall='sudo apt install'
+    	alias shutdown='sudo shutdown now'
+    	alias reboot='sudo reboot'
+    	alias liup='apt list --upgradable'
+    fi
 fi
 
 # if user is not root, pass all commands via sudo #
-if [ $UID -ne 0 ]; then
-	alias update='sudo apt update'
-	alias upgrade='sudo apt upgrade'
-	alias ainstall='sudo apt install'
-	alias shutdown='sudo shutdown now'
-	alias reboot='sudo reboot'
-	alias liup='apt list --upgradable'
-fi
-
+#if [ $UID -ne 0 ]; then
+#	alias update='sudo apt update'
+#	alias upgrade='sudo apt upgrade'
+#	alias ainstall='sudo apt install'
+#	alias shutdown='sudo shutdown now'
+#	alias reboot='sudo reboot'
+#	alias liup='apt list --upgradable'
+#fi
+#
 neofetch
 
 alias win11='cd /mnt/data/qemu/quickemu; ./quickemu --vm windows-11.conf --display spice'
