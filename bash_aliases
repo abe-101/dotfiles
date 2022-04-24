@@ -29,8 +29,6 @@ export VISUAL=vim
 CDPATH=.:/usr/share/doc:~:~/Desktop:~
 export CDPATH
 
-source ~/.local/bin/ssh_shortcut
-
 # runs the bash script in current env not as a child process
 alias cbook='. cbook'
 alias pybook='. pybook'
