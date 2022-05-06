@@ -15,8 +15,8 @@ alias veragelt='sudo veracrypt --mount-options=timestamp --mount /home/$USER/Doc
 alias verad='sudo veracrypt -d'
 
 # Quickly connect to ProtonVPN
-alias ny11='protonvpn-cli c US-NY#11 -p tcp'
-alias ny48='protonvpn-cli c US-NY#48 -p tcp'
+alias ny47='protonvpn-cli c US-NY#47 -p udp'
+alias ny48='protonvpn-cli c US-NY#48 -p udp'
 
 umask 0002
 alias l.='ls -d .* --color=auto'
@@ -43,8 +43,9 @@ wtfis() {
 	curl "https://cheat.sh/$1"
 }
 
-# Refresh .bash_aliases
+# System dependant aliases
 if cat /etc/*release | grep ^NAME | grep Fedora; then
+    # Refresh .bash_aliases
     alias bashrc="vim ~/.bashrc.d/bash_aliases && source ~/.bashrc.d/bash_aliases"
     # if user is not root, pass all commands via sudo #
     if [ $UID -ne 0 ]; then
@@ -56,6 +57,7 @@ if cat /etc/*release | grep ^NAME | grep Fedora; then
     	alias liup='dnf list --upgradable'
     fi
 elif cat /etc/*release | grep ^NAME | grep Debian ; then
+    # Refresh .bash_aliases
     alias bashrc="vim ~/.bash_aliases && source ~/.bash_aliases"
     # if user is not root, pass all commands via sudo #
     if [ $UID -ne 0 ]; then
@@ -68,21 +70,11 @@ elif cat /etc/*release | grep ^NAME | grep Debian ; then
     fi
 fi
 
-# if user is not root, pass all commands via sudo #
-#if [ $UID -ne 0 ]; then
-#	alias update='sudo apt update'
-#	alias upgrade='sudo apt upgrade'
-#	alias ainstall='sudo apt install'
-#	alias shutdown='sudo shutdown now'
-#	alias reboot='sudo reboot'
-#	alias liup='apt list --upgradable'
-#fi
-#
+# Display System Info
 neofetch
 
-alias win11='cd /mnt/data/qemu/quickemu; ./quickemu --vm windows-11.conf --display spice'
-alias macos='cd /mnt/data/qemu/quickemu; ./quickemu --vm macos-catalina.conf'
-alias fedora='cd /mnt/data/qemu/quickemu; ./quickemu --vm fedora-35_beta.conf --display spice'
+# Disable middle-click paste in Linux
+xbindkeys -p
 
 # quicly rotate screen
 alias screenInverted='xrandr --output eDP1 --rotate inverted'
