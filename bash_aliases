@@ -17,6 +17,11 @@ alias verad='sudo veracrypt -d'
 # Quickly connect to ProtonVPN
 alias ny47='protonvpn-cli c US-NY#47 -p udp'
 alias ny48='protonvpn-cli c US-NY#48 -p udp'
+alias tx40='protonvpn-cli c US-TX#40 -p udp'
+
+pvpn() {
+    protonvpn-cli c US-${1^^}#$2 -p udp
+}
 
 umask 0002
 alias l.='ls -d .* --color=auto'
