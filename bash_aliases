@@ -84,3 +84,5 @@ xbindkeys -p
 # quicly rotate screen
 alias screenInverted='xrandr --output eDP1 --rotate inverted'
 alias screenNormal='xrandr --output eDP1 --rotate normal'
+
+alias forcast='curl wttr.in && curl v2.wttr.in'
