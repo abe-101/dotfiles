@@ -1,3 +1,22 @@
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'tpope/vim-sensible'
+Plug 'junegunn/seoul256.vim'
+" Emmet is a plugin for many popular text editors which greatly improves HTML & CSS workflow
+Plug 'mattn/emmet-vim'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
 if v:progname =~? "evim"
@@ -76,3 +95,4 @@ set incsearch             " But do highlight as you type your search.
 
 " Turn on spell check
 "set spell spelllang=en_us
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
