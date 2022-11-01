@@ -12,10 +12,18 @@ Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
 " Emmet is a plugin for many popular text editors which greatly improves HTML & CSS workflow
 Plug 'mattn/emmet-vim'
+Plug 'psf/black', { 'branch': 'stable' }
+Plug 'davidhalter/jedi-vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
+nnoremap <F9> :Black<CR>
+" call black formater upon exit of python file
+"augroup black_on_save
+"  autocmd!
+"  autocmd BufWritePre *.py Black
+"augroup end
 
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.

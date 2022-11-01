@@ -86,3 +86,15 @@ alias screenInverted='xrandr --output eDP1 --rotate inverted'
 alias screenNormal='xrandr --output eDP1 --rotate normal'
 
 alias forcast='curl wttr.in && curl v2.wttr.in'
+
+
+# virtualenvwrapper
+export WORKON_HOME=~/.envs
+VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
+source ~/.local/bin/virtualenvwrapper.sh
+
+# start python repl with jedi
+export PYTHONSTARTUP="$(python -m jedi repl)"
+
+# NPM install global modules
+export PATH=~/.npm-global/bin:$PATH
