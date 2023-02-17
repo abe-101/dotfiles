@@ -14,6 +14,9 @@ Plug 'junegunn/seoul256.vim'
 Plug 'mattn/emmet-vim'
 Plug 'psf/black', { 'branch': 'stable' }
 Plug 'davidhalter/jedi-vim'
+Plug 'chrisbra/unicode.vim'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'pangloss/vim-javascript'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -67,12 +70,18 @@ if has('syntax') && has('eval')
 endif
 " displays line number at the begining of the line
 set nu
+
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+autocmd Filetype python setlocal ts=4 sw=4 expandtab
 " Set tabe size at 4
 "set ts=4
 "set sw=4
-set tabstop=4
-set shiftwidth=4
-set expandtab
+"set tabstop=4
+"set shiftwidth=4
+"set expandtab
 
 " Disable arrow keys
 noremap <Up> <nop>

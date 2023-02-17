@@ -3,11 +3,13 @@
 # allowing the debian maitainers to make changes to .bashrc
 # without overiding individuals files.
 
+alias shloime='cp /home/thinkpad/repos/kolol-podcast-conversion/7N5A1742.jpg /home/thinkpad/repos/kolol-podcast-conversion/youtube-to-anchorfm/thumbnail.jpg '
 # Clear terminal with c
 alias c=clear
 
 # Mount using veracrypt software with shortcut veram
-alias veraper='sudo veracrypt --mount-options=timestamp --mount /home/$USER/Documents/personal /media/veracrypt1'
+alias veraperold='sudo veracrypt --mount-options=timestamp --mount /home/$USER/Documents/personal /media/veracrypt3'
+alias veraper='sudo veracrypt --mount-options=timestamp --mount /home/$USER/Documents/personal2 /media/veracrypt1'
 
 alias veragelt='sudo veracrypt --mount-options=timestamp --mount /home/$USER/Documents/gelt /media/veracrypt2'
 
