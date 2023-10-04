@@ -100,3 +100,8 @@ export PYTHONSTARTUP="$(python -m jedi repl)"
 
 # NPM install global modules
 export PATH=~/.npm-global/bin:$PATH
+
+# No more vim neovim
+alias vim='nvim'
+alias vi='nvim'
+alias capt='source podcast'
