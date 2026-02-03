@@ -118,3 +118,7 @@ export SUDO_EDITOR="nvim"
 
 # opencode
 export PATH=/home/thinkpad/.opencode/bin:$PATH
+
+# No more vim neovim
+alias vim='nvim'
+alias vi='nvim'
