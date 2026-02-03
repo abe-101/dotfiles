@@ -14,7 +14,7 @@ cd ~/dotfiles
 stow .
 
 # Create machine-specific config
-cat > ~/.config/zsh/local.zsh << 'CONF'
+cat > ~/dotfiles/.config/zsh/local.zsh << 'CONF'
 # Add machine-specific aliases here
 CONF
 ```
