@@ -71,6 +71,9 @@ ENABLE_CORRECTION="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/python#virtual-environments
+PYTHON_AUTO_VRUN=true
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
