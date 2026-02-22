@@ -10,3 +10,8 @@ vim.opt.foldmethod = "expr"
 vim.g.autoformat = false
 -- Set to "basedpyright" to use basedpyright instead of pyright.
 vim.g.lazyvim_python_lsp = "basedpyright"
+
+-- Disable legacy Python 3 provider. The built-in ftplugin/python.vim calls
+-- has('python3') which triggers detect_by_module('neovim') — a ~6s scan in
+-- large repos. Not needed when using LSP for completion/diagnostics.
+vim.g.loaded_python3_provider = 0
