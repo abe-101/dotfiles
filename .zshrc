@@ -20,7 +20,7 @@ ZSH_THEME="random"
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" "terminalparty" )
+ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "terminalparty" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -79,7 +79,7 @@ PYTHON_AUTO_VRUN=true
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dnf gh npm pip pre-commit python)
+plugins=(git dnf gh npm pip pre-commit python zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 

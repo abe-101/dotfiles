@@ -7,6 +7,7 @@ Personal configs managed with GNU Stow.
 # Install dependencies
 sudo dnf install stow git zsh neovim  # Fedora
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode
 
 # Clone and setup
 git clone git@github.com:abe-101/dotfiles.git ~/dotfiles
