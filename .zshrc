@@ -125,3 +125,4 @@ export PATH=/home/thinkpad/.opencode/bin:$PATH
 # No more vim neovim
 alias vim='nvim'
 alias vi='nvim'
+alias c='clear'
