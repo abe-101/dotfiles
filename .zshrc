@@ -119,10 +119,10 @@ export SUDO_EDITOR="nvim"
 [ -f ~/.config/zsh/local.zsh ] && source ~/.config/zsh/local.zsh
 
 
-# opencode
-export PATH=/home/thinkpad/.opencode/bin:$PATH
-
 # No more vim neovim
 alias vim='nvim'
 alias vi='nvim'
 alias c='clear'
+
+# opencode
+export PATH=~/.opencode/bin:$PATH
