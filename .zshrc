@@ -28,6 +28,7 @@ ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "terminalparty" )
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
+# 
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -122,7 +123,13 @@ export SUDO_EDITOR="nvim"
 # No more vim neovim
 alias vim='nvim'
 alias vi='nvim'
+<<<<<<< Updated upstream
 alias c='clear'
 
 # opencode
 export PATH=~/.opencode/bin:$PATH
+||||||| Stash base
+=======
+
+alias cc='claude'
+>>>>>>> Stashed changes
