@@ -123,13 +123,9 @@ export SUDO_EDITOR="nvim"
 # No more vim neovim
 alias vim='nvim'
 alias vi='nvim'
-<<<<<<< Updated upstream
 alias c='clear'
 
 # opencode
 export PATH=~/.opencode/bin:$PATH
-||||||| Stash base
-=======
 
 alias cc='claude'
->>>>>>> Stashed changes
